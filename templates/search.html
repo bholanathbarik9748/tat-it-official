@@ -1,0 +1,395 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static "tat.png.png" %}" type="image/gif">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Search Result</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid" id="top">
+            <a href="{% url 'index' %}">
+                <img id="Main_img1" src={% static "tat.png.png" %} alt="WEb main logo">
+                <a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item" id="home">
+                                <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="{% url 'courses' %}">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="{% url 'blog' %}">Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="{% url 'books' %}">Books</a>
+                            </li>
+                            <li class=" nav-item">
+                                <a class="nav-link" aria-current="page" href="{% url 'about' %}">About</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" method="get" action="/search/">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                name="query">
+                            <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+        </div>
+    </nav>
+    <br>
+    <h1>search Results:</h1>
+    <br>
+    <!-- Head 1 -->
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "Java.png" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Java Programming Masterclass for Software Developers (udemy)<br> <b>(Tim
+                            Buchalka)</b>
+                    </h5>
+                    <p class="card-text">Learn Java In This Course And Become a Computer Programmer. Obtain valuable
+                        Core Java Skills</p>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a
+                                    href="https://drive.google.com/drive/folders/1lXWrwo1hoNutAzm5-f85Qs-5Runc91Rk?usp=sharing">
+                                    <button type="button" class="btn btn-outline-warning">part 1(java
+                                        Basic)</button>
+                                </a>
+                                <a
+                                    href="https://drive.google.com/drive/folders/1do1XNYHwb5QK4Lni9cywS9Ct3ptI8u1r?usp=sharing">
+                                    <button type="button" class="btn btn-outline-danger">part 2(java
+                                        Advance)</button>
+                                </a>
+                                <a
+                                    href="https://drive.google.com/drive/folders/1dIQ57GwOWXsp4XHK3-6zhRuS8mLwBNNX?usp=sharing">
+                                    <button type="button" class="btn btn-outline-success">part 3(java
+                                        development)</button>
+                                </a>
+                            </div>
+                            <p><a
+                                    href="https://drive.google.com/drive/folders/1EwRPAA0xHYmq1Zoi2cbiTTup1j_0JqkG?usp=sharing">JAVA
+                                    full
+                                    Notes</a></p>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "python.png" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">2021 Complete Python Bootcamp From Zero to Hero in Python (udemy)<br>
+                        <b>(Jose Portilla)</b>
+                    </h5>
+                    <p class="card-text">Learn Python like a Professional Start from the basics and go all the way
+                        to
+                        creating your own applications and games</p>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a
+                                    href="https://drive.google.com/drive/folders/10XBYVKpr_pgSVu8ymH3XfloH1klRt0LV?usp=sharing">
+                                    <button type="button" class="btn btn-outline-danger">Python full Course</button>
+                                </a>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "Android.png" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">The Complete Android N Developer Course (udemy)<br>
+                        <b>(Rob Percival)</b>
+                    </h5>
+                    <p class="card-text">Learn Android App Development with Android 7 Nougat by building real apps
+                        including Uber, Whatsapp and Instagram!</p>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a
+                                    href="https://drive.google.com/drive/folders/1bCgCI5AV9Qnl-9jy-TV4Vp12WT-jde7F?usp=sharing">
+                                    <button type="button" class="btn btn-outline-danger">go to course</button>
+                                </a>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "web.png" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">The Web Developer Bootcamp 2021(udemy)<br>
+                        <b>(Colt Steele)</b>
+                    </h5>
+                    <p class="card-text">COMPLETELY REDONE - The only course you need to learn web development - HTML,
+                        CSS, JS, Node, and More!</p><br>
+                    <b>Due to the Large File Size, we not provide This course Online contact SUNIL KUMAR PANDA (CR-Boys)
+                        To get this course</b>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "data_science.jpg" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Python for Data Science and Machine Learning Bootcamp(udemy)<br>
+                        <b>(Jose Portilla)</b>
+                    </h5>
+                    <p class="card-text">Learn how to use NumPy, Pandas, Seaborn , Matplotlib , Plotly , Scikit-Learn ,
+                        Machine Learning, Tensorflow , and more!.</p>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a
+                                    href="https://drive.google.com/drive/folders/1-1vzgaHoqx3i40q8TC8uJzdfBVGS8B5i?usp=sharing">
+                                    <button type=" button" class="btn btn-outline-danger">go to course</button>
+                                </a>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "ml.png" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Machine Learning A-Z™: Hands-On Python & R In Data Science(udemy)<br>
+                        <b>(Kirill Eremenko)</b>
+                    </h5>
+                    <p class="card-text">Learn to create Machine Learning Algorithms in Python and R from two Data
+                        Science experts. Code templates included.</p>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a
+                                    href="https://drive.google.com/drive/folders/1FGZsNT_ta1DS04FOCKklBzUHJ0HcTe6A?usp=sharing">
+                                    <button type=" button" class="btn btn-outline-danger">go to course</button>
+                                </a>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "c.png" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">C Programming For Beginners - Master the C Language (udemy)<br> <b>(Jason
+                            Fedin)</b>
+                    </h5>
+                    <p class="card-text">C Programming will increase career options. Become a better dev in other
+                        languages by learning C. Pointers explained</p>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a
+                                    href="https://drive.google.com/drive/folders/1E15Td24w26yiAgt6_FtfkQFfb-0zOEoJ?usp=sharing">
+                                    <button type="button" class="btn btn-outline-danger">go to course</button>
+                                </a>
+                            </div>
+                            <p><a
+                                    href="https://drive.google.com/drive/folders/1razC8skHIFw6okFyGIzBAroycu5p-RZk?usp=sharing">c
+                                    full
+                                    Notes</a></p>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "c++.png" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Beginning C++ Programming - From Beginner to Beyond (udemy)<br> <b>(Dr. Frank
+                            Mitropoulos)</b>
+                    </h5>
+                    <p class="card-text">Obtain Modern C++ Object-Oriented Programming (OOP) and STL skills needed for
+                        game, system, and application development.</p>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a
+                                    href="https://drive.google.com/drive/folders/1SGV-aFskkR0DpxjNXheu_f4Byafm_EZH?usp=sharing">
+                                    <button type="button" class="btn btn-outline-danger">go to course</button>
+                                </a>
+                            </div>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src={% static "linux.png" %} alt="Java" width="180px" height="320px">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Learn Linux in 5 Days and Level Up Your Career(udemy)<br>
+                        <b>(Jason Cannon)</b>
+                    </h5>
+                    <p class="card-text">Use the in-demand Linux skills you learn in this course to get promoted or
+                        start a new career as a Linux professional.</p>
+                    <p class="card-text"><small class="text-muted">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a
+                                    href="https://drive.google.com/drive/folders/1xhtipKY2fWrp2DXNIQIN6SuP0Tz9upv-?usp=sharing">
+                                    <button type=" button" class="btn btn-outline-danger">go to course</button>
+                                </a>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('div');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+<style>
+    /* Navbar */
+    .bg-dark {
+        background-color: #343a40 !important;
+    }
+
+    .navbar-nav {
+        margin: 0 auto;
+    }
+
+    .nav-item {
+        margin-right: 15%;
+        padding: 0px;
+    }
+
+    @media screen and (max-width: 4166px) and (min-width: 999px) {
+        .nav-item {
+            margin-right: 65%;
+            margin-left: -37%;
+            padding: 0px;
+        }
+    }
+
+    .btn-danger {
+        color: #171717;
+        background-color: #d28829;
+        border-color: #382023;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.active,
+    .navbar-dark .navbar-nav .show>.nav-link {
+        color: #ffffff;
+    }
+
+    #Main_img1 {
+        width: 45px;
+    }
+
+    @media (max-width: 992px) {
+        #Main_img1 {
+            width: 70px;
+        }
+    }
+
+    /* Head 1 */
+
+    .card {
+        display: inline-block;
+        margin-bottom: 1rem !important;
+        margin: 20px;
+        margin-left: 86px;
+        margin-right: 120px;
+        margin-top: 39px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    @media screen and (max-width: 992px) {
+        .card {
+
+            margin: 0 auto;
+            /* Added */
+            float: none;
+            /* Added */
+            margin-bottom: 20px;
+            /* Added */
+
+        }
+    }
+</style>
+
+</html>
