@@ -1,0 +1,1 @@
+web: gunicorn tat_it_off.wsgi 
