@@ -25,7 +25,7 @@ SECRET_KEY = '(m#6ny--nm@aabl^z0##k#6y%eghcf%13czavwrhv)!r15g$*!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://tat-it-official.herokuapp.com/']
+ALLOWED_HOSTS = ['tat-it-official.herokuapp.com']
 
 
 # Application definition
