@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     'tat-it-official.herokuapp.com'
     '127.0.0.1',
     '127.0.0.1',
+    'tat-it-official.herokuapp.com',
 ]
 
 
