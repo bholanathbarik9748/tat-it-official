@@ -68,10 +68,8 @@
             <p class="lead text-muted">Confused about which course to take for Skills development? I have got you covered. Browse courses and find out the best udemy course for you.<b>It's free!</b><br>tat-it-official is <b>not a Official</b> website it's only created for fun and
                 Notes we don't want to hurt anyone's emotions. <b>:)</b></p>
             <p>
-                <a href="/blog" class="btn btn-secondary">Blogs</a>
-                <a href="{% url 'courses' %}" class="btn btn-success my-2">Online Courses</a>
-                <a href="https://bholanathbarik9748.github.io/online_ide.github.io/" class="btn btn-warning my-2">Online
-                    IDE</a>
+                <a href="https://bholanathbarik9748.github.io/online_ide.github.io/" id="ide_btn" class=" btn btn-warning my-2 ">Go to
+                    tat-it-official Online IDE</a>
             </p>
         </div>
     </section>
@@ -79,19 +77,19 @@
     <br>
     <br>
     <!-- Head 2 -->
-    <div class="container">
-        <div class="row">
-            <div class="card mx-auto my-2 p-2 align-items-center" style="width: 18rem;">
-                <img src="https://images.unsplash.com/photo-1523634921619-37ce98c1877f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80" class="padded card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title text-center"><b>Class Notes</b></h5>
-                    <p class="card-text text-center">Learn class work from class notes. Examples are available with these class notes. here we provide all class note of <b>IT branch</b></p>
-                    <a href="{% url 'notes' %}" class="btn btn-primary d-block">Go to Notes Page</a>
+    <div class="container ">
+        <div class="row ">
+            <div class="card mx-auto my-2 p-2 align-items-center " style="width: 18rem; ">
+                <img src="https://images.unsplash.com/photo-1523634921619-37ce98c1877f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80 " class="padded card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title text-center "><b>Class Notes</b></h5>
+                    <p class="card-text text-center ">Learn class work from class notes. Examples are available with these class notes. here we provide all class note of <b>IT branch</b></p>
+                    <a href="{% url 'notes' %} " class="btn btn-primary d-block ">Go to Notes Page</a>
                 </div>
             </div>
 
-            <div class="card mx-auto my-2 p-2 align-items-center" style="width: 18rem;">
-                <img src="https://www.codewithharry.com/assets/img/home-img-1.jpg" class="padded card-img-top " alt="... ">
+            <div class="card mx-auto my-2 p-2 align-items-center " style="width: 18rem; ">
+                <img src="https://www.codewithharry.com/assets/img/home-img-1.jpg " class="padded card-img-top " alt="... ">
                 <div class="card-body ">
                     <h5 class="card-title text-center "><b>Coding Articles</b></h5>
                     <p class="card-text text-center ">Some of the latest coding information compiled in the form of coding articles keep codeing and learning.
@@ -101,7 +99,7 @@
             </div>
 
             <div class="card mx-auto my-2 p-2 align-items-center " style="width: 18rem; ">
-                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" class="padded card-img-top " alt="... ">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80 " class="padded card-img-top " alt="... ">
                 <div class="card-body ">
                     <h5 class="card-title text-center "><b>Free Udemy Courses</b></h5>
                     <p class="card-text text-center ">Get your programming career started with these free udemy video courses. Source code is available in Free . </p>
@@ -128,7 +126,7 @@
                 <p><b>website:</b> <a href="https://tat.ac.in ">https://tat.ac.in</a></p>
             </div>
         </p1>
-        <p class="mb-0 text-center ">&copy; 2021-2022 tat-it-official.herokuapp.com</p>
+        <p class="mb-0 text-center ">&copy; 2021 tat-it-official.herokuapp.com</p>
 
 
     </footer>
@@ -271,6 +269,18 @@
     .web {
         display: flex;
         justify-content: center;
+    }
+    
+    .btn-primary {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #000000;
+        border-radius: 59px;
+    }
+    
+    #ide_btn {
+        border-radius: 12px;
+        border-color: #000000;
     }
 </style>
 
