@@ -29,3 +29,6 @@ def blog(request):
 
 def notes(request):
     return render(request, 'notes.html')
+
+def contact(request):
+    return render(request, 'contact.html')
