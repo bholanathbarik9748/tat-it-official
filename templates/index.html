@@ -78,8 +78,8 @@
             <p class="lead text-muted">Confused about which course to take for Skills development? I have got you covered. Browse courses and find out the best udemy course for you.<b>It's free!</b><br>tat-it-official is <b>not a Official</b> website it's only created for fun and
                 Notes we don't want to hurt anyone's emotions. <b>:)</b></p>
             <p>
-                <a href="https://bholanathbarik9748.github.io/online_ide.github.io/" id="ide_btn" class=" btn btn-warning my-2 ">Go to
-                    tat-it-official Online IDE</a>
+                <a href="https://bholanathbarik9748.github.io/online_ide.github.io/" id="ide_btn" class=" btn btn-warning my-2 ">
+                    <b>tat-it-official Online IDE</b></a>
             </p>
         </div>
     </section>
@@ -93,7 +93,7 @@
                     <div class="card__content">
                         <div class="card__title"><b>Class Notes</b></div>
                         <p class="card__text" style="text-align: center;">Learn class work from class notes. Examples are available with these class notes. here we provide all class note of IT branch</p>
-                        <a href="{% url 'notes' %} " class="btn btn-primary d-block ">Go to Notes Page</a>
+                        <a href="{% url 'notes' %} " class="btn btn-primary d-block ">Browse College Notes</a>
                     </div>
                 </div>
             </li>
@@ -103,7 +103,7 @@
                     <div class="card__content">
                         <div class="card__title"><b>Coding Articles</b></div>
                         <p class="card__text" style="text-align: center;">Some of the latest coding information compiled in the form of coding articles keep coding and learning.</p>
-                        <a href="{% url 'blog' %}" class="btn btn-primary d-block ">Go to Blog page</a>
+                        <a href="{% url 'blog' %}" class="btn btn-primary d-block ">Go to Blog</a>
                     </div>
                 </div>
             </li>
@@ -113,13 +113,12 @@
                     <div class="card__content">
                         <div class="card__title"><b>Contact Me</b></div>
                         <p class="card__text" style="text-align: center;">Learn programming from these free courses. You can contact me for any doubt and I will get back to you!</p>
-                        <a href="{% url 'contact' %} " class="btn btn-primary d-block ">Go to contact page</a>
+                        <a href="{% url 'contact' %} " class="btn btn-primary d-block ">Contact Me</a>
                     </div>
                 </div>
             </li>
         </ul>
     </div>
-    <br>
     <h1 class="slider_herad"><b>Courses Available Now</b> !</h1>
     <br>
     <div id="owl-demo">
@@ -199,7 +198,7 @@
     </div>
     <br>
     <div class="text-center">
-        <a href="{% url 'courses' %} " class="btn btn-primary ">Go to courses page</a>
+        <a href="{% url 'courses' %} " class="btn btn-primary ">Browse Video Courses</a>
     </div>
     <br>
     <br>
@@ -445,7 +444,6 @@
     .btn {
         border: 1px solid #000000;
         padding: 0.6rem;
-        text-transform: lowercase;
     }
     
     .btn--block {
