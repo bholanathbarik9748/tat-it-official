@@ -84,41 +84,41 @@
         </div>
     </section>
     <br>
-    <br>
-    <br>
     <!-- Head 2 -->
     <div class="container ">
-        <div class="row ">
-            <div class="card mx-auto my-2 p-2 align-items-center " style="width: 18rem; ">
-                <img src="https://images.unsplash.com/photo-1523634921619-37ce98c1877f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80 " class="padded card-img-top " alt="... ">
-                <div class="card-body ">
-                    <h5 class="card-title text-center "><b>Class Notes</b></h5>
-                    <p class="card-text text-center ">Learn class work from class notes. Examples are available with these class notes. here we provide all class note of <b>IT branch</b></p>
-                    <a href="{% url 'notes' %} " class="btn btn-primary d-block ">Go to Notes Page</a>
+        <ul class="cards">
+            <li class="cards__item">
+                <div class="card">
+                    <div class="card__image card__image--fence"></div>
+                    <div class="card__content">
+                        <div class="card__title"><b>Class Notes</b></div>
+                        <p class="card__text" style="text-align: center;">Learn class work from class notes. Examples are available with these class notes. here we provide all class note of IT branch</p>
+                        <a href="{% url 'notes' %} " class="btn btn-primary d-block ">Go to Notes Page</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card mx-auto my-2 p-2 align-items-center " style="width: 18rem; ">
-                <img src="https://www.codewithharry.com/assets/img/home-img-1.jpg " class="padded card-img-top " alt="... ">
-                <div class="card-body ">
-                    <h5 class="card-title text-center "><b>Coding Articles</b></h5>
-                    <p class="card-text text-center ">Some of the latest coding information compiled in the form of coding articles keep coding and learning.
-                    </p>
-                    <a href="/blog " class="btn btn-primary d-block ">Go to Blog page</a>
+            </li>
+            <li class="cards__item">
+                <div class="card">
+                    <div class="card__image card__image--river"></div>
+                    <div class="card__content">
+                        <div class="card__title"><b>Coding Articles</b></div>
+                        <p class="card__text" style="text-align: center;">Some of the latest coding information compiled in the form of coding articles keep coding and learning.</p>
+                        <a href="{% url 'blog' %}" class="btn btn-primary d-block ">Go to Blog page</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card mx-auto my-2 p-2 align-items-center " style="width: 18rem; ">
-                <img src="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="padded card-img-top " alt="... ">
-                <div class="card-body ">
-                    <h5 class="card-title text-center "><b>Contact Me</b></h5>
-                    <p class="card-text text-center ">Learn programming from these free courses. You can contact me for any doubt and I will get back to you!</p>
-                    <a href="{% url 'contact' %} " class="btn btn-primary d-block ">Go to contact page</a>
+            </li>
+            <li class="cards__item">
+                <div class="card">
+                    <div class="card__image card__image--record"></div>
+                    <div class="card__content">
+                        <div class="card__title"><b>Contact Me</b></div>
+                        <p class="card__text" style="text-align: center;">Learn programming from these free courses. You can contact me for any doubt and I will get back to you!</p>
+                        <a href="{% url 'contact' %} " class="btn btn-primary d-block ">Go to contact page</a>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
-    <br>
     <br>
     <h1 class="slider_herad"><b>Courses Available Now</b> !</h1>
     <br>
@@ -436,6 +436,121 @@
 </script>
 
 <style>
+    img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    
+    .btn {
+        border: 1px solid #000000;
+        padding: 0.6rem;
+        text-transform: lowercase;
+    }
+    
+    .btn--block {
+        display: block;
+        width: 100%;
+    }
+    
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .cards__item {
+        display: flex;
+        padding: 1rem;
+    }
+    
+    @media (min-width: 40rem) {
+        .cards__item {
+            width: 50%;
+        }
+    }
+    
+    @media (min-width: 56rem) {
+        .cards__item {
+            width: 33.3333%;
+        }
+    }
+    
+    .card {
+        background-color: white;
+        border-radius: 0.35rem;
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .card:hover .card__image {
+        filter: contrast(100%);
+    }
+    
+    .card__content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .card__image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        filter: contrast(70%);
+        overflow: hidden;
+        position: relative;
+        transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+    }
+    
+    .card__image::before {
+        content: "";
+        display: block;
+        padding-top: 56.25%;
+    }
+    
+    @media (min-width: 40rem) {
+        .card__image::before {
+            padding-top: 66.6%;
+        }
+    }
+    
+    .card__image--fence {
+        background-image: url(https://images.unsplash.com/photo-1523634921619-37ce98c1877f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80 );
+    }
+    
+    .card__image--river {
+        background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80);
+    }
+    
+    .card__image--record {
+        background-image: url(https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+    }
+    
+    .card__title {
+        color: #696969;
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .card__text {
+        flex: 1 1 auto;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
+</style>
+
+<style>
     #owl-demo .item {
         margin: 3px;
     }
@@ -446,5 +561,7 @@
         height: auto;
     }
 </style>
+
+</html>
 
 </html>
